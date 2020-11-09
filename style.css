@@ -10,14 +10,15 @@
 }
 
 body{
+	font-family:"Open Sans", sans-serif;
 	width:100%;
 	min-height: 100vh;
 	background-image:url("img/code.png");
 	background-color:var(--bg-color-principal);
 	background-attachment: fixed;
+	background-size:cover;
 	background-position: center center;
 	background-repeat:no-repeat;
-	font-family:"Open-Sans" sans-serif;
 	overflow-x: hidden;
 }
 
@@ -25,7 +26,7 @@ body{
 	width:100%;
 	min-height:100vh;
 	background:var(--bg-color-principal);
-	z-index: -1;
+	z-index: 1;
 }
 
 /* Header related */
@@ -43,10 +44,10 @@ header{
 }
 
 header .logo{
-	font-family: "Permanent Marker";
 	font-size:2.5em;
 	color:var(--nav-text-color);
 	flex-grow: 2;
+	font-family: "Merienda", cursive;
 }
 
 header nav{
@@ -60,6 +61,17 @@ header nav{
 header nav li{
 	list-style-type: none;
 	height:100%;
+	text-transform: uppercase;
+	font-weight: 300;
+}
+
+header nav select, header nav option{
+	font-weight:300;
+	background:#1d1d1d;
+	outline:none;
+	border:none;
+	color:#e2e2e2;
+	margin-top:2px;
 }
 
 header nav li:hover{
@@ -81,8 +93,8 @@ header .toggleBar{
 	color:var(--nav-text-color);;
 	cursor:pointer;
 	position:absolute;
-	right:10px;
-	top:-5px;
+	right:20px;
+	top:-10px;
 }
 
 header .toggleBar input{
@@ -90,7 +102,7 @@ header .toggleBar input{
 }
 
 .presentation{
-	padding: 25em;
+	padding: 25em 10px;
 	height: 90vh;
 	display:flex;
 	justify-content:center;
@@ -100,20 +112,11 @@ header .toggleBar input{
 
 .presentation h1{
 	color:#e2e2e2;
-	height:10vh;
+	height:50px;
+	display:block;
+	text-transform: uppercase;
 }
 
-.presentation h1:nth-child(1){
-	transform:translateX(-15vw);
-}
-
-.presentation h1:nth-child(2){
-	transform:translateX(0vw);
-}
-
-.presentation h1:nth-child(3){
-	transform:translateX(15vw);
-}
 
 .portfolioRedirect{
 	color:white;
@@ -131,6 +134,49 @@ header .toggleBar input{
 .portfolioRedirect:hover{
 	background:rgba(226,226,266,0.1);
 }
+
+.portfolio{
+	background:#1d1d1d;
+	color:#e2e2e2;
+	padding:10px;
+}
+
+.portfolio h1{
+	text-align:center;
+	text-transform:uppercase;
+	margin-bottom:4rem;
+}
+
+.portfolio main{
+	display:flex;
+}
+.portfolio main aside{
+	width:20%;
+	height:60vh;
+	position:sticky;
+	top:12vh;
+}
+.portfolio main section{
+	width:80%;
+	padding:10px;
+	border:1px solid #e2e2e2;
+	margin: 0 0 0 auto;
+}
+.portfolio main aside li{
+	border:1px solid #e2e2e2;
+	padding:10px;
+	list-style-type: none;
+	text-transform:uppercase;
+	cursor:pointer;
+	height:60px;
+	width:100%;
+}
+
+.portfolio main aside li.selected{
+	background-color:rgba(226,226,226,0.3)
+}
+
+
 @media screen and (max-width: 720px){
 	header{
 		display:block;
@@ -155,6 +201,12 @@ header .toggleBar input{
 		height:30px;
 		margin:10px;
 	}
+
+	header nav.open select{
+		position:absolute;
+		top:2.5em;
+		left:0;
+	}
 	li:hover{
 		background:#1a1a1a;
 	}
@@ -170,26 +222,7 @@ header .toggleBar input{
 	}
 
 	.presentation{
-		align-items: flex-start;
-		justify-content:center;
-		padding:8em 10px 0 10px;
-	}
-
-	.presentation h1{
-		width:100%;
-	}
-	.presentation h1:nth-child(1){
-		transform:translateX(0);
-	}
-
-	.presentation h1:nth-child(2){
-		transform:translateX(0);
-
-	}
-
-	.presentation h1:nth-child(3){
-		transform:translateX(0);
-		text-align:right;
+		padding:8em 0 0 10px;
 	}
 
 }
