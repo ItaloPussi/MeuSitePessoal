@@ -225,4 +225,23 @@ header .toggleBar input{
 		padding:8em 0 0 10px;
 	}
 
+	.portfolio main aside{
+		width:20%;
+	}
+	.portfolio main section{
+		width:80%;
+		padding:10px;
+		border:1px solid #e2e2e2;
+		margin: 0 0 0 auto;
+	}
+	.portfolio main aside li{
+		border:1px solid #e2e2e2;
+		padding:10px;
+		list-style-type: none;
+		text-transform:uppercase;
+		cursor:pointer;
+		height:60px;
+		width:100%;
+	}
+
 }

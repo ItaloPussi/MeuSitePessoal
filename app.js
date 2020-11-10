@@ -3,8 +3,23 @@ const nav = document.querySelector("nav")
 const presentation = document.querySelector(".presentation")
 const links = nav.querySelectorAll("li")
 
+const portfolioItems = document.querySelectorAll("#portfolio main aside li")
+portfolioItems.forEach(item=> item.addEventListener("click", handlePortfolioItemDisplay))
 
+ function handlePortfolioItemDisplay(){
+	portfolioItems.forEach(item => item.classList.remove("selected"))
+	this.classList.add("selected")
 
+	var xhttp = new XMLHttpRequest();
+	xhttp.onreadystatechange = function() {
+		if (this.readyState == 4 && this.status == 200) {
+		document.getElementById("portfolio-text-container").innerHTML = this.responseText;
+		}
+	};
+	 xhttp.open("GET",`portfolio/${this.dataset.file}.html`, true);
+	xhttp.send();
+
+}
 const toggleBar = document.querySelector("#toggleBar")
 
 toggleBar.addEventListener("change",()=>{
@@ -40,7 +55,7 @@ function inicializeLanguage(){
 
 	if(defaultLanguage != null){
 		translate(lang[defaultLanguage])
-
+		language.value = defaultLanguage
 	}else{
 		const getLanguage = () => navigator.userLanguage || (navigator.languages && navigator.languages.length && navigator.languages[0]) || navigator.language || navigator.browserLanguage || navigator.systemLanguage || 'en';
 		let navigatorLang = ''

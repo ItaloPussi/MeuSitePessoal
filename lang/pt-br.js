@@ -7,5 +7,6 @@ const langPt =  {
     "automations": "automações",
     "much": "E muito mais!",
     "seePort": "Ver portfólio",
-    "plus": "E MUITO MAIS"
+    "plus": "E MUITO MAIS",
+   "wannaSeeMore": "Quer ver mais projetos como esse?"
 }
