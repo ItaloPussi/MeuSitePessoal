@@ -23,7 +23,10 @@ const lang = {
 }
 
 const language = document.querySelector("#language")
-language.addEventListener("change", (e)=> translate(lang[e.target.value]))
+language.addEventListener("change", (e)=> {
+	localStorage.setItem("lang", e.target.value)
+	translate(lang[e.target.value])
+})
 
 function translate(selectedLang){
 	wrappers = document.querySelectorAll("[data-wrapper]")
@@ -32,3 +35,25 @@ function translate(selectedLang){
 	})
 }
 
+function inicializeLanguage(){
+	const defaultLanguage = localStorage.getItem("lang")
+
+	if(defaultLanguage != null){
+		translate(lang[defaultLanguage])
+
+	}else{
+		const getLanguage = () => navigator.userLanguage || (navigator.languages && navigator.languages.length && navigator.languages[0]) || navigator.language || navigator.browserLanguage || navigator.systemLanguage || 'en';
+		let navigatorLang = ''
+		if(getLanguage().includes("pt-")){
+			navigatorLang = "br"
+		}else{
+			navigatorLang = "en"
+		}
+		language.value = navigatorLang
+		translate(lang[navigatorLang])
+	}
+	
+}
+
+inicializeLanguage()
+	
