@@ -13,7 +13,12 @@ portfolioItems.forEach(item=> item.addEventListener("click", handlePortfolioItem
 	var xhttp = new XMLHttpRequest();
 	xhttp.onreadystatechange = function() {
 		if (this.readyState == 4 && this.status == 200) {
-		document.getElementById("portfolio-text-container").innerHTML = this.responseText;
+			const div = document.createElement("div")
+			div.innerHTML = this.responseText
+			document.getElementById("portfolio-text-container").innerHTML = ''
+			document.getElementById("portfolio-text-container").appendChild(div)
+			translate(lang[language.value])
+			// document.getElementById("portfolio-text-container").innerHTML = this.responseText;
 		}
 	};
 	 xhttp.open("GET",`portfolio/${this.dataset.file}.html`, true);

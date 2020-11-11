@@ -8,5 +8,6 @@ const langPt =  {
     "much": "E muito mais!",
     "seePort": "Ver portfólio",
     "plus": "E MUITO MAIS",
-   "wannaSeeMore": "Quer ver mais projetos como esse?"
+   "wannaSeeMore": "Quer ver mais projetos como esse?",
+   "wannaSeeMoreText": "Se sim, sinta-se livre para acessar meu Github. De tempos em tempos novos projetos são feitos ou atualizados."
 }
