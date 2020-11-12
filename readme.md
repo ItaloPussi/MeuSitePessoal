@@ -1,12 +1,16 @@
-# Meu Site
+# My site
 
-Uma coisa bem importante para os programadores é ter um local onde possa exibir seu portfólio. Nesse projeto construirei meu futuro site, que será responsável por apresentar minha marca ao mundo. Construído em duas linguagens (português e inglês), ele mostrará um pouco da minha história além dos meus principais projetos.
+<a href="https://github.com/ItaloPussi/MeuSitePessoal/blob/master/readme.pt.md">Versão em Português</a> 👈
+
+One very important thing for programmers is to have a place where they can display their portfolio. In this project I will build my future website, which will be responsible for presenting my brand to the world. Built in two languages (Portuguese and English), it will show a little of my history in addition to my main projects.
+
 
 ## Status
-![22%](https://progress-bar.dev/22)
+![25%](https://progress-bar.dev/25)
 
-## Contribuindo
-Encontrou algum bug, sinta-se livre para abrir uma issue!
+## contributing
+Find a bug? If so please open a issue!
 
-## Licença
+## Licence
 [MIT](https://choosealicense.com/licenses/mit/)
+
