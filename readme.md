@@ -8,7 +8,7 @@ One very important thing for programmers is to have a place where they can displ
 ## Status
 ![25%](https://progress-bar.dev/25)
 
-## contributing
+## Contributing
 Find a bug? If so please open a issue!
 
 ## Licence
